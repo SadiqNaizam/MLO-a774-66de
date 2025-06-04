@@ -4,89 +4,96 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /*
+      NOTE: The "Inter" font family is specified.
+      Please ensure it is loaded in your project, for example, via a CDN in your HTML head:
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    */
+    --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Dark Theme Colors (Exclusive) */
+    --background: 220 15% 5%; /* Very Dark Desaturated Blue/Charcoal */
+    --foreground: 220 10% 90%; /* Light Grayish Blue */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: 220 15% 8%; /* Slightly Lighter than BG */
+    --card-foreground: 220 10% 90%; /* Light Grayish Blue */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --popover: 220 15% 8%; /* Slightly Lighter than BG */
+    --popover-foreground: 220 10% 90%; /* Light Grayish Blue */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: 175 50% 40%; /* Muted Teal */
+    --primary-foreground: 175 30% 95%; /* Very Light Teal/Off-white */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: 220 10% 15%; /* Darker Gray */
+    --secondary-foreground: 220 10% 75%; /* Mid-Light Gray */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 220 10% 30%; /* Mid Gray */
+    --muted-foreground: 220 10% 60%; /* Gray */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: 175 50% 40%; /* Muted Teal (Same as Primary) */
+    --accent-foreground: 175 30% 95%; /* Very Light Teal/Off-white (Same as Primary FG) */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 65% 50%; /* Red */
+    --destructive-foreground: 0 0% 95%; /* Off-white for text on destructive */
 
-    --radius: 0.5rem;
+    --border: 220 10% 20%; /* Subtle Dark Gray Border */
+    --input: 220 15% 10%; /* Slightly Lighter than BG for input fields */
+    --ring: 175 60% 55%; /* Brighter Teal for focus ring */
 
-    --sidebar-background: 0 0% 98%;
+    --radius: 0.25rem; /* 4px subtle rounding */
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar Variables - Aligned with Dark Theme */
+    --sidebar-background: 220 15% 6%;
+    --sidebar-foreground: 220 10% 90%;
+    --sidebar-primary: 175 50% 40%;
+    --sidebar-primary-foreground: 175 30% 95%;
+    --sidebar-accent: 175 50% 40%;
+    --sidebar-accent-foreground: 175 30% 95%;
+    --sidebar-border: 220 10% 18%;
+    --sidebar-ring: 175 60% 55%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark Theme Colors (Exclusive - Mirrored from :root for consistency) */
+    --background: 220 15% 5%;
+    --foreground: 220 10% 90%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 15% 8%;
+    --card-foreground: 220 10% 90%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 15% 8%;
+    --popover-foreground: 220 10% 90%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 175 50% 40%;
+    --primary-foreground: 175 30% 95%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 10% 15%;
+    --secondary-foreground: 220 10% 75%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 10% 30%;
+    --muted-foreground: 220 10% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 175 50% 40%;
+    --accent-foreground: 175 30% 95%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 10% 20%;
+    --input: 220 15% 10%;
+    --ring: 175 60% 55%;
+
+    /* Sidebar Variables - Aligned with Dark Theme */
+    --sidebar-background: 220 15% 6%;
+    --sidebar-foreground: 220 10% 90%;
+    --sidebar-primary: 175 50% 40%;
+    --sidebar-primary-foreground: 175 30% 95%;
+    --sidebar-accent: 175 50% 40%;
+    --sidebar-accent-foreground: 175 30% 95%;
+    --sidebar-border: 220 10% 18%;
+    --sidebar-ring: 175 60% 55%;
   }
 }
 
@@ -96,6 +103,6 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans; /* Apply new font-sans */
   }
 }
